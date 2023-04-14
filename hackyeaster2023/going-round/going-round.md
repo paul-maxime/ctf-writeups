@@ -4,7 +4,9 @@
 
 - If we try to encrypt the encrypted flag, we get something that looks similar to a flag: `tq2023{rx1b_z_d0f4f3_uz_b4ude}`. `2023`, `{` and `}` are correct. That website seems to apply some kind of cipher that moves characters around and increment them.
 
-- That kind of cipher might loop. If we encrypt enough times, we might end up with the flag. Especially when the challenge is called "going round".
+- It seems to be swapping characters and doing a `ROT`, so there's probably an easy way to decrypt the password.
+
+- However, that kind of cipher might loop. If we encrypt enough times, we might end up with the flag. Especially when the challenge is called "going round".
 
 - Let's try to encrypt our string a bunch of times to see if we get the flag.
 
@@ -38,5 +40,3 @@ he2023{fl1p_n_r0t4t3_in_p4irs}
 ```
 
 - Looks like we did get the flag without having to understand the algorithm. Nice.
-
-- Seems like it was just swapping characters + doing a `ROT`, so there's probably a faster way to decrypt the password.
